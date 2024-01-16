@@ -7,6 +7,36 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#053B50" Offset="0"/>
+                    <GradientStop Color="#176B87" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Canvas>
+                    <Polygon Points="0,20 180, 100 0,200" Fill="#053B50" Opacity="0.7"/>
+                    <Polygon Points="150, 350 230,350 190,450" Fill="#176B87" Opacity="0.7"/>
+                    <Ellipse Fill="#176B87" Width="50" Height="50" Canvas.Left="32" Canvas.Top="320" Opacity="0.7"/>
+                    <Ellipse Fill="#053B50" Width="50" Height="50" Canvas.Left="260" Canvas.Top="29" Opacity="0.7"/>
+                </Canvas>
+
+                <StackPanel>
+                    <TextBlock Text="Sing in" Style="{Binding Source= {StaticResource txtTitle}}"/>
+                    <TextBlock Text="Choose to login or register yourself" Style="{StaticResource txtDescription}"/>
+                    <Button Content="Sing in" Style="{Binding Source={StaticResource btn_sing in}}"/>
+                </StackPanel>
+                
+                
+            </Grid>
+        </Border>
+
     </Grid>
 </Window>
