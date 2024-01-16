@@ -9,7 +9,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <BitmapImage x:Key="google" UriSource="Images\google.png"></BitmapImage>
+            <BitmapImage x:Key="facebook" UriSource="Images\facebook.png"></BitmapImage>
+            <BitmapImage x:Key="linkedin" UriSource="Images\linkedin.png"></BitmapImage>
+            
         </ResourceDictionary>
-         
+                              
     </Application.Resources>
 </Application>

@@ -44,5 +44,21 @@
         </Style.Triggers>
         
     </Style>
+
+
+    <Style x:Key="btn_icon" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="10 0 0 10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="#092635" BorderThickness="1" Padding="10" CornerRadius="50">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     
 </ResourceDictionary>
