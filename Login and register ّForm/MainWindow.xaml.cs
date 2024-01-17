@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Login_and_register_ّForm
 {
@@ -23,6 +14,43 @@ namespace Login_and_register_ّForm
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+
+        private void txt_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtBox.Focus();
+        }
+
+        private void txtBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtBox.Text) && txtBox.Text.Length > 0)
+            {
+
+                txt.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                txt.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void txtPas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Pas.Focus();
+        }
+
+        private void Pas_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Pas.Password) && Pas.Password.Length > 0)
+            {
+                txtPas.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                txtPas.Visibility = Visibility.Visible;
+            }
         }
     }
 }

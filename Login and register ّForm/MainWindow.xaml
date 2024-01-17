@@ -55,6 +55,37 @@
                         <Image Source="{StaticResource linkedin}" Width="30" Height="30"/>
                     </Button>
                 </StackPanel>
+
+                <TextBlock Text="Enter your email and then password" Style="{StaticResource txtDescription}" FontSize="17"/>
+                <Border BorderBrush="#9EC8B9" BorderThickness="1" Margin="70 6" CornerRadius="5">
+                    <Grid Margin="9 7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="Images\email.png" Width="20" Height="20"/>
+                        <TextBlock x:Name="txt" Text="Email" Style="{StaticResource txt_Email}" MouseDown="txt_MouseDown"/>
+                        <TextBox x:Name="txtBox" Style="{StaticResource box_Email}" TextChanged="txtBox_TextChanged"/>
+
+                    </Grid>
+                </Border>
+
+                <Border Margin="70 6" BorderBrush="#9EC8B9" BorderThickness="1" CornerRadius="5">
+                    <Grid Margin="9 7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="Images\lock.png" Width="20" Height="20"/>
+                        <TextBlock x:Name="txtPas" MouseDown="txtPas_MouseDown" Style="{StaticResource txt_Email}" Text="Password"/>
+                        <PasswordBox x:Name="Pas" Style="{StaticResource box_Email}" PasswordChanged="Pas_PasswordChanged"/>
+                    </Grid>
+                </Border>
+
+                <Button Content="Sign Up" Style="{StaticResource btn_sign Up}"/>
+
             </StackPanel>
         </Border>
 

@@ -103,5 +103,9 @@
     <Resource Include="Images\google.png" />
     <Resource Include="Images\linkedin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email.png" />
+    <Resource Include="Images\Lock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
